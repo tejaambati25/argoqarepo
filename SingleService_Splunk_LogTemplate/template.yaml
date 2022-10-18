@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapps
+  name: testapps18
 spec:
   metrics:
-    - name: testapps
+    - name: testapps18
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: https://argocd17.ninja-test.opsmx.net/
           user: admin
-          application: argocd-qa01-singleservice-logtemplate-splunk-kavitha-94013
+          application: argocd-qa01-singleservice-logtemplate-splunk-teja-94013
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
@@ -18,7 +18,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: logtemplateSplunk-kavitha
+          - logTemplateName: spluncklogtemplet
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
