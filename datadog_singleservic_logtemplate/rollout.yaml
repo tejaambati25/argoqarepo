@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo-exp
-          image: docker.io/opsmxdev/issuegen:v3.0.9
+          image: docker.io/opsmxdev/issuegen:v3.0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -26,7 +26,7 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testapp
+              - name : argorolltest
                 requiredForCompletion: true
                 templateName: testapp
             templates:
