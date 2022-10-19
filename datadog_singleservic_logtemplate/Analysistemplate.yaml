@@ -8,7 +8,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argocd.demoserver.opsmx.net/
+          gateUrl: https://argo.isd.demoserver.opsmx.net/
           user: admin
           application: tejaapp19
           baselineStartTime: "2022-11-03T11:29:46.915Z"
