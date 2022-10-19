@@ -10,7 +10,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argo17.ninja-test.opsmx.net/
           user: admin
-          application: testlogmetric
+          application: tejalogmetric
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
