@@ -1,28 +1,30 @@
-apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: testapp
+  name: oes-analysis
 spec:
+  args:
+    - name: experiment-hash
   metrics:
-    - name: testapp
+    - name: oes-analysis
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argo17.ninja-test.opsmx.net/
-          user: admin
-          application: tejalogmetric
+          gateUrl: https://argo.isd.demoserver.opsmx.net/
+          application: demoelastic1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
-          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z" 
+          user: admin
           lifetimeMinutes: 6
-          threshold: 
+          threshold:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: elasticlogtemplate
-            metricScopeVariables: "kubernetes.container_name"
+          - logTemplateName: elktemp
+            logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
-            metricTemplateName: elasticmetrictemplate
+            metricTemplateName: ddtemp
             metricScopeVariables: "variable1"
             baselineMetricScope: "service:baseapp"
             canaryMetricScope: "service:canaryapp"
