@@ -1,24 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp
+  name: datadogtestapp
 spec:
   metrics:
-    - name: testapp
+    - name: datadogtestapp
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: https://argocd.demoserver.opsmx.net/
           user: admin
           application: datadog1
-          baselineStartTime: "2021-11-03T11:29:46.915Z"
-          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          baselineStartTime: "2022-11-03T11:29:46.915Z"
+          canaryStartTime: "2022-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: datadogcustom
-            metricScopeVariables: "variable1"
-            baselineMetricScope: "service:baseapp"
-            canaryMetricScope: "service:canaryapp"
+          - logTemplateName: datadoglogtemplate
+            logScopeVariables: " kubernetes.container_name"
+            baselineLogScope: "oes-platform-br"
+            canaryLogScope: "oes-platform-cr"
+            serviceName: "dogservicewithlogtemplate"
