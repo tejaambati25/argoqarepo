@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotest1
+  name: argorolltest
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotest1
+      app: argorolltest
   template:
     metadata:   
       labels:
-        app: argotest1
+        app: argorolltest
     spec:
       containers:
         - name: rollouts-demo-exp
-          image: docker.io/opsmxdev/issuegen:v3.0.7
+          image: docker.io/opsmxdev/issuegen:v3.0.8
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
