@@ -10,7 +10,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argocd.demoserver.opsmx.net/
           user: admin
-          application: datadog1
+          application: tejapp19
           baselineStartTime: "2022-11-03T11:29:46.915Z"
           canaryStartTime: "2022-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
