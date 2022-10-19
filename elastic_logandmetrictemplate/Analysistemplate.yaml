@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp
+  name: elasticapp
 spec:
   metrics:
-    - name: testapp
+    - name: elasticapp
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: https://argo17.ninja-test.opsmx.net/
           user: admin
           application: datadog1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
@@ -18,7 +18,11 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: datadogcustom
+          - metricTemplateName: elasticlogtemplate
+            metricScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
+            metricTemplateName: elasticmetrictemplate
             metricScopeVariables: "variable1"
             baselineMetricScope: "service:baseapp"
             canaryMetricScope: "service:canaryapp"
