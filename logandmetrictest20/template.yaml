@@ -10,7 +10,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoisdv1.ninja-test.opsmx.net/
+          gateUrl: https://argocdv1.ninja-test.opsmx.net/
           application: tejalogmetricapp
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
