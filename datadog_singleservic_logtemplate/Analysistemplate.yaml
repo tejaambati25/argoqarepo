@@ -8,9 +8,9 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argo.isd.demoserver.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           user: admin
-          application: tejaapp19
+          application: datalogapp
           baselineStartTime: "2022-11-03T11:29:46.915Z"
           canaryStartTime: "2022-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
