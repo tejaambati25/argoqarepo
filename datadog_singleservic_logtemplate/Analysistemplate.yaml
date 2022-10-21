@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: datadogtestapp
+  name: oes-analysis
 spec:
   metrics:
-    - name: datadogtestapp
+    - name: oes-analysis
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argo.isd.demoserver.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           user: admin
-          application: tejaapp19
+          application: datalogapp
           baselineStartTime: "2022-11-03T11:29:46.915Z"
           canaryStartTime: "2022-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
