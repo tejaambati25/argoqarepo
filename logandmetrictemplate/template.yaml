@@ -10,7 +10,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argo.isd.demoserver.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           application: newapp21
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
