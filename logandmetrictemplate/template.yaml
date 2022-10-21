@@ -12,8 +12,8 @@ spec:
           profile: "opsmx-profile"
           gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           application: newapp21
-          baselineStartTime: "2022-03-08T10:46:00Z"
-          canaryStartTime: "2022-03-08T10:46:00Z"
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
           user: admin
           lifetimeMinutes: 6
           threshold:
