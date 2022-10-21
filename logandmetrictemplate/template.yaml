@@ -24,7 +24,12 @@ spec:
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
-            metricTemplateName: datadogtemp
+            serviceName: "Splunklogservice"
+          - metricTemplateName: datadogtemp
             metricScopeVariables: "variable1"
             baselineMetricScope: "service:baseapp"
             canaryMetricScope: "service:canaryapp"
+            serviceName: "datadogmetricservice"
+            
+            
+            
