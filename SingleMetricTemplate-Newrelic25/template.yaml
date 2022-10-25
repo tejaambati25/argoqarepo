@@ -8,7 +8,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           user: admin
           application:  teja25
           baselineStartTime: "2022-09-26T04:17:00.002Z"
