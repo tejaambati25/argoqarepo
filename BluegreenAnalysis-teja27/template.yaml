@@ -11,7 +11,7 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           application: bluegreenrollout
           user: admin
           lifetimeMinutes: 3
