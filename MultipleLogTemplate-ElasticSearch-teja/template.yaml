@@ -8,9 +8,9 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
           user: admin
-          application: argocd-qa01-59038
+          application: elasticapp27
           baselineStartTime: "2022-09-16T06:10:00Z"
           canaryStartTime: "2022-09-19T08:06:00Z"
           lifetimeMinutes: 6
@@ -18,47 +18,47 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: testLogTemplateName99652
+          - logTemplateName: stackdrivertemplate
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "StackDriverService1"
-          - logTemplateName: testLogTemplateName77961
+          - logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "ElasticSearchService1"
-          - logTemplateName: testLogTemplateName91830
+          - logTemplateName: stackdrivertemplate
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "StackDriverService2"
-          - logTemplateName: testLogTemplateName26136
+          - logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "ElasticSearchService2"
-          - logTemplateName: testLogTemplateName85457
+          - logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "ElasticSearchService3"
-          - logTemplateName: testLogTemplateName70096
+          - logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "ElasticSearchService4"
-          - logTemplateName: testLogTemplateName63104
+          - logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "ElasticSearchService5"
-          - logTemplateName: testLogTemplateName58445
+          - logTemplateName: stackdrivertemplate
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
             serviceName: "StackDriverService3"
-          - logTemplateName: testLogTemplateName79782
+          - logTemplateName: stackdrivertemplate
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
