@@ -11,8 +11,8 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: bluegreenrollout
+          gateUrl: http://argoisdfull.ninja-test.opsmx.net/
+          application: bluegreenrolloutteja
           user: admin
           lifetimeMinutes: 3
           baselineStartTime: "2021-11-03T11:29:46.915Z"
@@ -22,7 +22,7 @@ spec:
             marginal: 60
           services:
           - serviceName: 
-            logTemplateName: mkrlogtemp
+            logTemplateName: elastictemplate
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
